@@ -1,0 +1,3 @@
+echo FROM node:18-alpine > Dockerfile.logservice
+echo WORKDIR /app >> Dockerfile.logservice
+echo CMD ["node", "log-service.js"] >> Dockerfile.logservice

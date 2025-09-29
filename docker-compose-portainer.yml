@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  postgres-with-volume:
+    image: postgres:15-alpine
+    container_name: postgres-volume-demo
+    environment:
+      POSTGRES_DB: demo_db
+      POSTGRES_USER: demo_user
+      POSTGRES_PASSWORD: demo123
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_demo_volume:/var/lib/postgresql/data
+      - ./demo-init.sql:/docker-entrypoint-initdb.d/demo-init.sql
+    networks:
+      - demo-network
+
+  portainer:
+    image: portainer/portainer-ce:latest
+    container_name: portainer
+    ports:
+      - "9000:9000"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer_data:/data
+    restart: unless-stopped
+    networks:
+      - demo-network
+
+volumes:
+  postgres_demo_volume:
+    external: true
+  portainer_data:
+
+networks:
+  demo-network:
+    driver: bridge
