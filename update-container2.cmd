@@ -1,26 +1,15 @@
 @echo off
-echo [%DATE% %TIME%] Starting container update from GitHub...
+echo Обновление контейнера из Git репозитория...
 
-:: Переходим в директорию проекта
-cd /d "C:\Users\Администратор\Desktop\my-node-app"
+cd C:\Users\Администратор\Desktop\my-node-app
 
-:: Останавливаем и удаляем старые контейнеры
-echo Stopping and removing old containers...
+echo Останавливаем существующие контейнеры...
 docker-compose down
 
-:: Получаем последние изменения из GitHub
-echo Pulling latest code from GitHub...
-git pull origin main
+echo Получаем последние изменения из Git...
+git pull
 
-:: Пересобираем и запускаем контейнеры
-echo Building and starting new containers...
+echo Пересобираем и запускаем контейнеры...
 docker-compose up --build -d
 
-:: Проверяем статус контейнеров
-echo Checking container status...
-docker ps
-
-:: Логируем завершение
-echo [%DATE% %TIME%] Update completed successfully!
-echo Container is running on http://localhost:3000
-pause
+echo Готово! Контейнер обновлен из Git.
