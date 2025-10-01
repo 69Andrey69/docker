@@ -3,3 +3,6 @@
 2025-09-29T13:21:39.761Z: GET /about - Instance: 2
 2025-09-29T13:21:54.484Z: GET / - Instance: 2
 2025-09-29T13:21:54.534Z: GET /favicon.ico - Instance: 2
+2025-10-01T18:52:54.551Z: GET / - Instance: 2
+2025-10-01T18:52:54.621Z: GET /home - Instance: 2
+2025-10-01T18:52:55.684Z: GET /about - Instance: 2

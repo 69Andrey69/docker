@@ -3,3 +3,6 @@
 2025-09-29T13:21:36.970Z: GET /test - Instance: 1
 2025-09-29T13:21:50.950Z: GET / - Instance: 1
 2025-09-29T13:21:51.013Z: GET /favicon.ico - Instance: 1
+2025-10-01T18:52:54.426Z: GET / - Instance: 1
+2025-10-01T18:52:54.480Z: GET /api - Instance: 1
+2025-10-01T18:52:54.513Z: GET /test - Instance: 1
