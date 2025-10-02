@@ -56,10 +56,10 @@ async function getLogsFromVolumes() {
           }
         }
       } else {
-        result += `❌ Volume not found: ${volumePath}\n\n`;
+        result += ` Volume not found: ${volumePath}\n\n`;
       }
     } catch (error) {
-      result += `❌ Error reading ${volumePath}: ${error.message}\n\n`;
+      result += ` Error reading ${volumePath}: ${error.message}\n\n`;
     }
   }
   
